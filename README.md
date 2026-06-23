@@ -25,8 +25,8 @@ Send the bot a sticker, a custom emoji, or a sticker pack link and get back ever
 ## Self-hosting
 
 ```bash
-git clone https://github.com/bytasim/anystickerdownload
-cd anystickerdownload
+git clone https://github.com/bytasim/anysticker
+cd anysticker
 
 python3 -m venv .venv
 source .venv/bin/activate

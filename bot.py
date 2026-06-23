@@ -212,7 +212,7 @@ async def cmd_start(message: Message, db: aiosqlite.Connection) -> None:
 
     text += (
         "\n\n"
-        '<a href="https://github.com/bytasim/anystickerdownload">GitHub</a>    '
+        '<a href="https://github.com/bytasim/anysticker">GitHub</a>    '
         '<a href="https://t.me/intellicue">Updates</a>'
     )
 
@@ -226,7 +226,7 @@ async def cmd_help(message: Message) -> None:
         "<b>Video</b>  →  <code>.webm</code>\n\n"
         "Paste <code>t.me/addstickers/Name</code> or <code>t.me/addemoji/Name</code> to download a full pack.\n"
         "Send a message with custom emoji to extract them.\n\n"
-        '<a href="https://github.com/bytasim/anystickerdownload">GitHub</a>    '
+        '<a href="https://github.com/bytasim/anysticker">GitHub</a>    '
         '<a href="https://t.me/intellicue">Updates</a>',
         disable_web_page_preview=True,
     )
