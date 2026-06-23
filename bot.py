@@ -210,7 +210,13 @@ async def cmd_start(message: Message, db: aiosqlite.Connection) -> None:
     if parts:
         text += f"\n\n<i>You've converted {', '.join(parts)}.</i>"
 
-    await message.answer(text)
+    text += (
+        "\n\n"
+        '<a href="https://github.com/bytasim/anystickerdownload">GitHub</a>    '
+        '<a href="https://t.me/intellicue">Updates</a>'
+    )
+
+    await message.answer(text, disable_web_page_preview=True)
 
 @router.message(Command("help"))
 async def cmd_help(message: Message) -> None:
@@ -219,7 +225,10 @@ async def cmd_help(message: Message) -> None:
         "<b>Static</b>  →  <code>.webp</code>  <code>.png</code>  <code>.jpg</code>\n"
         "<b>Video</b>  →  <code>.webm</code>\n\n"
         "Paste <code>t.me/addstickers/Name</code> or <code>t.me/addemoji/Name</code> to download a full pack.\n"
-        "Send a message with custom emoji to extract them."
+        "Send a message with custom emoji to extract them.\n\n"
+        '<a href="https://github.com/bytasim/anystickerdownload">GitHub</a>    '
+        '<a href="https://t.me/intellicue">Updates</a>',
+        disable_web_page_preview=True,
     )
 
 @router.message(F.sticker)
